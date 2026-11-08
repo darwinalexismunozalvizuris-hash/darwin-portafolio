@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b16">
+  <meta name="description" content="Darwin | Soluciones digitales, páginas web, soporte tecnológico y diseño digital en Guatemala.">
+  <title>Darwin | Soluciones Digitales</title>
+  <style>
+    :root{--bg:#080b16;--panel:#11182a;--panel2:#151f35;--purple:#9b8cff;--cyan:#58e1df;--muted:#aab5ca;--white:#f7f9ff;--line:#283550}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:radial-gradient(ellipse at 78% 0%,#25204c 0,transparent 34%),radial-gradient(ellipse at 0% 55%,#102c39 0,transparent 30%),var(--bg);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,90%);margin:auto}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid #ffffff12}
+    .brand{font-weight:900;letter-spacing:1.5px;font-size:1.12rem}.brand span{color:var(--cyan)}
+    .navlinks{display:flex;gap:27px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:var(--cyan)}
+    .hero{padding:88px 0 78px;display:grid;grid-template-columns:1.2fr .8fr;gap:54px;align-items:center}
+    .tag{display:inline-flex;gap:10px;align-items:center;border:1px solid #514b7a;background:#17182d;padding:7px 14px;border-radius:30px;color:#e0dcff;font-size:.82rem}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}
+    h1{font-size:clamp(2.8rem,7vw,5.25rem);line-height:1.04;letter-spacing:-3px;margin:23px 0}
+    h1 span{background:linear-gradient(90deg,var(--purple),var(--cyan));background-clip:text;color:transparent}
+    .lead{color:var(--muted);font-size:1.12rem;max-width:650px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:12px;font-weight:800;background:linear-gradient(105deg,#9880ff,#625bd8);box-shadow:0 12px 30px #7458ff30;transition:transform .2s,filter .2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    .btn.secondary{background:#171e31;border:1px solid #394763;box-shadow:none}
+    .visual{min-height:330px;border:1px solid #45416c;border-radius:28px;background:linear-gradient(145deg,#211d40,#101a29);padding:22px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;box-shadow:0 25px 80px #0005}
+    .visual:before{content:"";position:absolute;width:260px;height:260px;border:1px solid #8e7aff55;border-radius:50%;box-shadow:0 0 0 25px #8e7aff0b,0 0 0 55px #8e7aff08}
+    .orb{position:relative;width:178px;height:178px;border-radius:50%;background:radial-gradient(circle at 35% 28%,#d4cbff,#9478ff 40%,#29204f 75%);box-shadow:0 0 85px #9574ff77;display:grid;place-items:center;font-size:5rem;font-weight:950;color:#17132b}
+    .float{position:absolute;background:#1b2038eF;border:1px solid #514c78;border-radius:12px;padding:10px 14px;color:#e7e5ff;font-size:.84rem;box-shadow:0 10px 25px #0004}
+    .f1{top:25px;left:18px}.f2{right:16px;bottom:28px}
+    section{padding:62px 0}.eyebrow{color:var(--cyan);text-transform:uppercase;letter-spacing:2px;font-size:.76rem;font-weight:850}
+    h2{font-size:clamp(1.9rem,4vw,2.7rem);letter-spacing:-1.2px;line-height:1.15;margin:9px 0 12px}
+    .sub{color:var(--muted);max-width:680px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:30px}
+    .card{background:linear-gradient(155deg,#171f34,#101727);border:1px solid var(--line);border-radius:19px;padding:24px;transition:.22s}
+    .card:hover{transform:translateY(-5px);border-color:#756bc1;box-shadow:0 16px 35px #0003}
+    .ico{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:#292548;font-size:1.4rem;margin-bottom:17px}
+    .card h3{margin:0 0 8px}.card p{margin:0;color:var(--muted);font-size:.94rem}
+    .note{margin-top:22px;padding:17px 19px;border-left:3px solid var(--cyan);background:#10202a;border-radius:0 12px 12px 0;color:#cbd9e2;font-size:.93rem}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:28px}
+    .step{padding:22px;border-radius:17px;background:#111a2b;border:1px solid var(--line)}
+    .num{color:var(--purple);font-weight:950;font-size:1.55rem}
+    .step h3{margin:5px 0}
+    .contact{background:linear-gradient(120deg,#211b43,#102a35);border:1px solid #514b78;border-radius:26px;padding:clamp(25px,5vw,42px);margin-top:22px;box-shadow:0 20px 60px #0003}
+    .contact p{color:#c4cbe0;max-width:680px}
+    .contact-number{display:inline-flex;align-items:center;gap:10px;margin-top:8px;color:#e6e9ff;font-weight:750;font-size:1.05rem}
+    footer{padding:38px 0;color:#858fa8;font-size:.85rem;text-align:center;border-top:1px solid #ffffff12;margin-top:35px}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;padding:62px 0 45px;gap:30px}.visual{min-height:245px}.grid,.steps{grid-template-columns:1fr}.navlinks{gap:13px;font-size:.8rem}.navlinks a:nth-child(2){display:none}h1{letter-spacing:-2px}.contact{padding:25px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#">DARWIN<span>.</span></a>
+      <div class="navlinks"><a href="#servicios">Servicios</a><a href="#proceso">Cómo trabajo</a><a href="#contacto">Contacto</a></div>
+    </nav>
+
+    <main>
+      <div class="hero">
+        <div>
+          <div class="tag"><span class="dot"></span> Soluciones digitales y soporte tecnológico</div>
+          <h1>La tecnología<br>trabajando <span>para ti.</span></h1>
+          <p class="lead">Creo páginas web sencillas y ayudo a personas y pequeños negocios a resolver necesidades digitales: desde una presencia en internet hasta documentos y configuración básica de computadoras.</p>
+          <div class="actions">
+            <a class="btn" href="#contacto">Hablemos de tu proyecto</a>
+            <a class="btn secondary" href="#servicios">Ver servicios</a>
+          </div>
+        </div>
+        <div class="visual" aria-label="Diseño gráfico tecnológico">
+          <div class="float f1">⌘ Diseño web</div><div class="orb">D</div><div class="float f2">01 · Ideas digitales</div>
+        </div>
+      </div>
+
+      <section id="servicios">
+        <div class="eyebrow">Qué puedo ofrecer</div>
+        <h2>Servicios para empezar</h2>
+        <p class="sub">Soluciones prácticas, claras y a un precio que se puede conversar según el trabajo.</p>
+        <div class="grid">
+          <article class="card"><div class="ico">🌐</div><h3>Páginas web</h3><p>Webs informativas para emprendimientos, negocios, profesionales o proyectos personales, adaptadas a celulares.</p></article>
+          <article class="card"><div class="ico">🖥️</div><h3>Ayuda con computadoras</h3><p>Instalación y configuración básica de programas, organización de archivos y orientación para resolver problemas comunes.</p></article>
+          <article class="card"><div class="ico">📄</div><h3>Documentos y presentaciones</h3><p>Diseño y formato de documentos, tareas, hojas de cálculo y presentaciones con una apariencia ordenada.</p></article>
+          <article class="card"><div class="ico">🎨</div><h3>Diseño digital sencillo</h3><p>Flyers, banners, portadas y piezas gráficas básicas para redes sociales o promociones.</p></article>
+          <article class="card"><div class="ico">📡</div><h3>Orientación en redes</h3><p>Apoyo básico para conectar dispositivos, revisar conexiones y organizar una red doméstica sencilla.</p></article>
+          <article class="card"><div class="ico">🤖</div><h3>Soluciones con IA</h3><p>Uso de herramientas de inteligencia artificial para acelerar ideas, contenido y prototipos, con revisión humana.</p></article>
+        </div>
+        <div class="note">Trabajo con responsabilidad: antes de aceptar un proyecto reviso qué necesita, explico qué puedo entregar y confirmo el precio. No ofrezco servicios avanzados o certificaciones que todavía no tengo.</div>
+      </section>
+
+      <section id="proceso">
+        <div class="eyebrow">Simple y transparente</div>
+        <h2>¿Cómo trabajamos?</h2>
+        <div class="steps">
+          <div class="step"><div class="num">01</div><h3>Me cuentas tu idea</h3><p class="sub">Qué necesitas, para cuándo y qué resultado esperas.</p></div>
+          <div class="step"><div class="num">02</div><h3>Te doy una propuesta</h3><p class="sub">Acordamos alcance, tiempo y precio antes de comenzar.</p></div>
+          <div class="step"><div class="num">03</div><h3>Te entrego el trabajo</h3><p class="sub">Revisamos el resultado y hago los ajustes acordados.</p></div>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <div class="contact">
+          <div class="eyebrow">¿Tienes una idea?</div>
+          <h2>Hagámosla realidad.</h2>
+          <p>Cuéntame qué necesitas y conversemos sobre tu proyecto. Escríbeme directamente por WhatsApp o llámame; con gusto revisamos cómo puedo ayudarte.</p>
+          <a class="contact-number" href="tel:+50239127745">☎ &nbsp;+502 3912-7745</a>
+          <div class="actions">
+            <a class="btn" href="https://wa.me/50239127745?text=Hola%20Darwin%2C%20vi%20tu%20portafolio%20y%20me%20interesa%20un%20servicio.">✆ Escribirme por WhatsApp</a>
+            <a class="btn secondary" href="tel:+50239127745">☎ Llamar ahora</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>© 2026 Darwin · Soluciones digitales · Guatemala<br>Contacto: +502 3912-7745</footer>
+  </div>
+</body>
+</html>
